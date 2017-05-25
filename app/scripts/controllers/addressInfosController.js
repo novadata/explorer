@@ -53,13 +53,14 @@ angular.module('ethExplorer')
             }
 
             function getETHUSD() {
-              $.getJSON("https://coinmarketcap-nexuist.rhcloud.com/api/eth/price", function(json) {
-                var price = json.usd;
-                var ethusd = price.toFixed(2);
-                var balanceusd = "$" + ethusd * $scope.balance;
-                $scope.balanceusd = balanceusd;
-                //console.log("Balance in USD " + $scope.balanceusd);
-              });
+                $scope.balanceusd=1.0;
+              // $.getJSON("https://coinmarketcap-nexuist.rhcloud.com/api/eth/price", function(json) {
+              //   var price = json.usd;
+              //   var ethusd = price.toFixed(2);
+              //   var balanceusd = "$" + ethusd * $scope.balance;
+              //   $scope.balanceusd = balanceusd;
+              //   //console.log("Balance in USD " + $scope.balanceusd);
+              // });
             }
 
             function getAddressTransactionCount(){

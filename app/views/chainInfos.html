@@ -1,25 +1,25 @@
 <div class="container" style="padding-top: 10px;">
 
-    <h1><i class="fa fa-server"></i> Ethereum Information
-        <small>View information about the Ethereum Blockchain</small>
+    <h1><i class="fa fa-server"></i> 区块链信息
+        <small>查看区块链信息</small>
     </h1>
     <div id="chain" class="blockdiv">
         <table class="table table-striped">
             <tbody><tr>
-                <th colspan="2" style="text-align:left">Summary</th>
+                <th colspan="2" style="text-align:left">概况</th>
             </tr>
             <tr>
-                <td>Current Block</td>
+                <td>当前块</td>
                 <td><a href="./#/block/{{ blockNum }}">{{ blockNum }}</a></td>
             </tr>
             <tr>
-                <td>Block Time</td>
+                <td>块时间</td>
                 <td>
                     {{ blocktime }} seconds since block <a href="./#/block/{{ blockNum - 1 }}">{{ blockNum - 1 }}</a><br>
                 </td>
             </tr>
             <tr>
-                <td>Block Time Averages</td>
+                <td>平均块时间</td>
                 <td><table style="width:100%"><tbody><tr><td>
                     {{ blocktimeAverage1 }} seconds for the past 100 blocks<br>
                     {{ blocktimeAverage2 }} seconds for the past 1,000 blocks
@@ -32,27 +32,27 @@
                 </td>
             </tr>
             <tr>
-                <td>Current Difficulty</td>
+                <td>当前难度</td>
                 <td>{{ difficulty_formatted }}</td>
             </tr>
             <tr>
-                <td>Total Difficulty</td>
+                <td>总难度</td>
                 <td>{{ totalDifficulty_formatted }}</td>
             </tr>
             <tr>
-                <td>Gas Limit</td>
+                <td>Gas限制</td>
                 <td>{{ gasLimit }}</td>
             </tr>
             <tr>
-                <td>Time</td>
+                <td>时间</td>
                 <td>{{ time }}</td>
             </tr>
             <tr>
-                <td>Connected to ETH Network</td>
+                <td>区块链服务连接状态</td>
                 <td>{{ isConnected }}</td>
             </tr>
             <tr>
-                <td>API/Client Version</td>
+                <td>API/客户端版本</td>
                 <td>{{ versionApi }} - {{ versionClient }}</td>
             </tr>
           </tbody>

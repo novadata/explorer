@@ -170,28 +170,32 @@ angular.module('ethExplorer')
 
 
         function getHashrate()	{
-          $.getJSON("https://etherchain.org/api/miningEstimator", function(json) {
-            var hr = json.data[0].hashRate;
-            $scope.hashrate = hr;
-       	});
+          $scope.hashrate=1.0;
+        //   $.getJSON("https://etherchain.org/api/miningEstimator", function(json) {
+        //     var hr = json.data[0].hashRate;
+        //     $scope.hashrate = hr;
+       	// });
       }
 
         function getETHRates() {
-          $.getJSON("https://coinmarketcap-nexuist.rhcloud.com/api/eth/price", function(json) {
-            var price = json.usd;
-            $scope.ethprice = "$" + price.toFixed(2);
-          });
+          $scope.ethprice=1.0;
+          $scope.ethbtcprice=1.0;
+          $scope.ethmarketcap=1.0;
+          // $.getJSON("https://coinmarketcap-nexuist.rhcloud.com/api/eth/price", function(json) {
+          //   var price = json.usd;
+          //   $scope.ethprice = "$" + price.toFixed(2);
+          // });
 
-          $.getJSON("https://coinmarketcap-nexuist.rhcloud.com/api/eth/price", function(json) {
-            var btcprice = json.btc;
-            $scope.ethbtcprice = btcprice;
-          });
+          // $.getJSON("https://coinmarketcap-nexuist.rhcloud.com/api/eth/price", function(json) {
+          //   var btcprice = json.btc;
+          //   $scope.ethbtcprice = btcprice;
+          // });
 
-          $.getJSON("https://coinmarketcap-nexuist.rhcloud.com/api/eth/market_cap", function(json) {
-            var cap = json.usd;
-            //console.log("Current ETH Market Cap: " + cap);
-            $scope.ethmarketcap = cap;
-          });
+          // $.getJSON("https://coinmarketcap-nexuist.rhcloud.com/api/eth/market_cap", function(json) {
+          //   var cap = json.usd;
+          //   //console.log("Current ETH Market Cap: " + cap);
+          //   $scope.ethmarketcap = cap;
+          // });
         }
 
         function updateTXList() {
